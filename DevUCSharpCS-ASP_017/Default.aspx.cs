@@ -11,7 +11,14 @@ namespace DevUCSharpCS_ASP_017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            myTextBox.Text = "Some value";
+            myCalendar.SelectedDate = DateTime.Now.Date.AddDays(2);
+        }
 
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            resultLabel.Text = myTextBox.Text + " - "
+                + myCalendar.SelectedDate.ToShortDateString();
         }
     }
 }

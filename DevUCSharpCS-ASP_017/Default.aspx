@@ -22,7 +22,7 @@
             </asp:Calendar>
             <br />
             <br />
-            <asp:Button ID="okButton" runat="server" Text="OK" />
+            <asp:Button ID="okButton" runat="server" OnClick="okButton_Click" Text="OK" />
             <br />
             <br />
             <asp:Label ID="resultLabel" runat="server"></asp:Label>
