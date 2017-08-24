@@ -11,8 +11,13 @@ namespace DevUCSharpCS_ASP_017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            myTextBox.Text = "Some value";
-            myCalendar.SelectedDate = DateTime.Now.Date.AddDays(2);
+            //making sure this code only runs on the initial page load, so if it's NOT a PostBack....
+            //leaving the else out means do nothing in the case of else. 
+            if (!IsPostBack)
+            {
+                myTextBox.Text = "Some value";
+                myCalendar.SelectedDate = DateTime.Now.Date.AddDays(2);
+            }
         }
 
         protected void okButton_Click(object sender, EventArgs e)
